@@ -20,3 +20,8 @@ lenght' xs = sum [ 1 | _ <- xs]
 removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z'] ]
 nestedLists = [[1,3,5,2,3,1,2,4,5], [1,2,3,4,5,6,7,8,9], [1,2,4,2,1,6,3,1,3,2,3,6]]
 evenNumbersInNestedLists xxs = [ [ x | x <- xs, even x] | xs <- xxs ]
+
+zippedLists = zip [1..5] [5,5,5,5,5]
+zippedLists' = zip [1..5] ["one", "two", "three", "four", "five"]
+zippedListsWithDifferentLenghts = zip [5,3,2,6,2,7,2,5,4,6,6] ["im","a","turtle"]
+zippedInfiniteListWithFiniteList = zip [1..] ["apple", "orange", "cherry", "mango"]
