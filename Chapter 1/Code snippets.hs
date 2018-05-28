@@ -25,3 +25,7 @@ zippedLists = zip [1..5] [5,5,5,5,5]
 zippedLists' = zip [1..5] ["one", "two", "three", "four", "five"]
 zippedListsWithDifferentLenghts = zip [5,3,2,6,2,7,2,5,4,6,6] ["im","a","turtle"]
 zippedInfiniteListWithFiniteList = zip [1..] ["apple", "orange", "cherry", "mango"]
+
+triangles = [ (a,b,c) | a <- [1..10], b <- [1..10], c <- [1..10] ] -- creates list of 1000 tuples
+rightTriangles = [ (a,b,c) | c <- [1..10], a <- [1..c], b <- [1..a], a^2 + b^2 == c^2 ]
+rightTriangles' = [ (a,b,c) | c <- [1..10], a <- [1..c], b <- [1..a], a^2 + b^2 == c^2, a+b+c == 24 ]
