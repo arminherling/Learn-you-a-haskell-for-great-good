@@ -90,3 +90,10 @@ bmiTell'''' weight height
     where bmi = weight / height ^ 2
           (skinny, normal, overweight) = (18.5, 25.0, 30.0)
           
+
+
+initials :: String -> String -> String
+initials firstname lastname = [f] ++ ". " ++ [l] ++ "."
+    where (f:_) = firstname
+          (l:_) = lastname
+          
