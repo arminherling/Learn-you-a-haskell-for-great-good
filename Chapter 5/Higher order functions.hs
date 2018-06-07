@@ -100,3 +100,6 @@ sumOfMappedFunction = sum (filter (>10) (map (*2) [2..10]))
 sumOfMappedFunction' = sum $ filter (>10) $ map (*2) [2..10]
 
 mapFunctionToList = map ($ 3) [(4+), (10*), (^2), sqrt]
+
+negativeSumOfListTail = map (\xs -> negate (sum (tail xs))) [[1..5],[3..6],[1..7]]
+negativeSumOfListTail' = map (negate . sum . tail) [[1..5],[3..6],[1..7]]
