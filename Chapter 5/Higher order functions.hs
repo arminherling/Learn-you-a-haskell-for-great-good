@@ -98,3 +98,5 @@ sqrtSums = length (takeWhile (<1000) (scanl1 (+) (map sqrt [1..]))) + 1
 sumOfMappedFunction = sum (filter (>10) (map (*2) [2..10]))
 -- with function application $
 sumOfMappedFunction' = sum $ filter (>10) $ map (*2) [2..10]
+
+mapFunctionToList = map ($ 3) [(4+), (10*), (^2), sqrt]
