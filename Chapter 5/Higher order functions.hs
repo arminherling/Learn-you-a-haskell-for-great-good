@@ -106,3 +106,6 @@ negativeSumOfListTail' = map (negate . sum . tail) [[1..5],[3..6],[1..7]]
 
 replicateProduct = replicate 2 (product (map (*3) (zipWith max [1,2] [4,5])))
 replicateProduct' = replicate 2 . product . map (*3) $ zipWith max [1,2] [4,5]
+
+someFunction' x = ceiling (negate (tan (cos (max 50 x))))
+someFunction'' = ceiling . negate . tan . cos . max 50 -- point-free style
