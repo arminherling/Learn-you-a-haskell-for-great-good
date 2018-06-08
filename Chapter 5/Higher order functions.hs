@@ -109,3 +109,9 @@ replicateProduct' = replicate 2 . product . map (*3) $ zipWith max [1,2] [4,5]
 
 someFunction' x = ceiling (negate (tan (cos (max 50 x))))
 someFunction'' = ceiling . negate . tan . cos . max 50 -- point-free style
+
+oddSquareSum :: Integer
+oddSquareSum = sum (takeWhile (<10000) (filter odd (map (^2) [1..])))
+
+oddSquareSum' :: Integer
+oddSquareSum' = sum . takeWhile (<10000) . filter odd $ map (^2) [1..]
