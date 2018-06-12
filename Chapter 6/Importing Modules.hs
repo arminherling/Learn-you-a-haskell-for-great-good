@@ -19,3 +19,9 @@ encode offset msg = map (\c -> chr $ ord c + offset) msg
 
 decode :: Int -> String -> String
 decode shift msg = encode (negate shift) msg
+
+sumOfHundredOnes = foldl (+) 0 (replicate 100 1)
+
+sumOfTenMillionOnes = foldl (+) 0 (replicate 10000000 1)
+ -- faster because it doesnt keep each value in memory, it also doesnt cause stack overflows
+sumOfTenMillionOnes' = foldl' (+) 0 (replicate 10000000 1)
