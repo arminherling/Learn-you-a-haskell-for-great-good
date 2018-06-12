@@ -25,3 +25,12 @@ sumOfHundredOnes = foldl (+) 0 (replicate 100 1)
 sumOfTenMillionOnes = foldl (+) 0 (replicate 10000000 1)
  -- faster because it doesnt keep each value in memory, it also doesnt cause stack overflows
 sumOfTenMillionOnes' = foldl' (+) 0 (replicate 10000000 1)
+
+digitSum :: Int -> Int
+digitSum = sum . map digitToInt . show
+
+firstTo40 :: Maybe Int
+firstTo40 = find (\x -> digitSum x == 40) [1..]
+
+firstTo :: Int -> Maybe Int
+firstTo n = find (\x -> digitSum x == n) [1..]
