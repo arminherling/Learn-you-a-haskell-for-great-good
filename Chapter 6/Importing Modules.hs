@@ -93,3 +93,6 @@ phoneBookToMap xs = Map.fromListWith add xs
 
 phoneBookToMap' :: (Ord k) => [(k, a)] -> Map.Map k [a]
 phoneBookToMap' xs = Map.fromListWith (++) $ map (\(k, v) -> (k, [v])) xs
+
+mapWithHighestValue = Map.fromListWith max [(2,3),(2,5),(2,100),(3,29),(3,22),(3,11),(4,22),(4,15)]
+mapWithSummedValues = Map.fromListWith (+) [(2,3),(2,5),(2,100),(3,29),(3,22),(3,11),(4,22),(4,15)]
