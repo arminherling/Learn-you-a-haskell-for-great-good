@@ -67,4 +67,8 @@ phoneBook' = Map.fromList $
     ,("wendy", "939-8282")
     ,("penny", "853-2492")]
 
+-- insert returns a new map
 newBook = Map.insert "grace" "341-9021" phoneBook'
+
+string2digits :: String -> [Int]
+string2digits = map digitToInt . filter isDigit
