@@ -16,6 +16,9 @@ sphereArea radius = 4 * pi * (radius ^ 2)
 cubeArea :: Float -> Float
 cubeArea side = cubeVolume side side side
 
+cubeVolume :: Float -> Float
+cubeVolume side = cuboidVolume side side side
+
 cuboidArea :: Float -> Float -> Float -> Float
 cuboidArea a b c = rectArea a b * 2 + rectArea a c * 2 + rectArea c b * 2
 
