@@ -15,4 +15,7 @@ nudge (Rectangle (Point x1 y1) (Point x2 y2)) a b = Rectangle (Point (x1+a) (y1+
 baseCircle :: Float -> Shape
 baseCircle r = Circle (Point 0 0) r
 
+baseRect :: Float -> Float -> Shape
+baseRect width height = Rectangle (Point 0 0) (Point width height)
+
 differentSizedCircles = map (Circle (Point 10 20)) [10,20..50]
