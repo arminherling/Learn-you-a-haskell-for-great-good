@@ -28,3 +28,11 @@ baseRect :: Float -> Float -> Shape
 baseRect width height = Rectangle (Point 0 0) (Point width height)
 
 differentSizedCircles = map (Circle (Point 10 20)) [10,20..50]
+
+data Person = Person { firstName :: String
+                     , lastName :: String
+                     , age :: Int
+                     , height :: Float
+                     , phoneNumber :: String
+                     , flavor :: String } deriving (Show)
+
