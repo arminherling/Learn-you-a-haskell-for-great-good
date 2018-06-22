@@ -36,3 +36,14 @@ data Person = Person { firstName :: String
                      , phoneNumber :: String
                      , flavor :: String } deriving (Show)
 
+
+data Car = Car String String Int deriving (Show)
+
+data Car' = Car' { company :: String
+                 , model :: String
+                 , year :: Int
+                 } deriving (Show)
+
+                 
+mustang = Car "Ford" "Mustang" 1967
+mustang' = Car' {company="Ford", model="Mustang", year=1967}
