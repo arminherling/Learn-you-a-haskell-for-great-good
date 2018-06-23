@@ -44,6 +44,8 @@ data Car' = Car' { company :: String
                  , year :: Int
                  } deriving (Show)
 
+tellCar' :: Car' -> String
+tellCar' (Car' {company = c, model = m, year = y}) = "This " ++ c ++ " " ++ m ++ " was made in " ++ show y
                  
 mustang = Car "Ford" "Mustang" 1967
 mustang' = Car' {company="Ford", model="Mustang", year=1967}
