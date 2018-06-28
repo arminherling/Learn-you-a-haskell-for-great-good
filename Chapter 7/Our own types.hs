@@ -49,3 +49,9 @@ tellCar' (Car' {company = c, model = m, year = y}) = "This " ++ c ++ " " ++ m ++
                  
 mustang = Car "Ford" "Mustang" 1967
 mustang' = Car' {company="Ford", model="Mustang", year=1967}
+
+data Day = Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday
+    deriving (Eq, Ord, Show, Read, Bounded, Enum)
+
+minDay = minBound :: Day
+maxDay = maxBound :: Day
